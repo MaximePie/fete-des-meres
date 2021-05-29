@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+
+import Mamie from "./Mamie.jsx";
+import ChooseYourGift from "./ChooseYourGift.jsx";
+import Maman from "./Maman.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={ChooseYourGift}/>
+          <Route path="/mamie" exact component={Mamie}/>
+          <Route path="/maman" exact component={Maman}/>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 

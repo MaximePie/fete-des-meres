@@ -1,38 +1,67 @@
 .App {
+  font-family: 'Pattaya', sans-serif;
+  letter-spacing: 1.2px;
+}
+
+.ChooseYourGift {
+  margin: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Gifts {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Gift {
+  background: rgba(237,85,88,1);
+  transition: background 250ms ease-in-out;
+  background: radial-gradient(circle, rgb(237, 190, 147) 30%, rgb(200, 166, 182) 71%);
+  font-size: 1.2em;
+  border: solid 1px lightgray;
+  border-radius: 4px;
+  width: 200px;
+  cursor: pointer;
+
+  margin-right: 2em;
+  padding: 1em;
+
+  text-align: justify;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
+.Gift:hover {
+  background: rgb(205, 163, 140);
+  transition: background 250ms ease-in-out;
+}
+
+.Gift a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.Mamie, .Maman {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  animation: fadeIn forwards 2s
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: rotateZ(2deg);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: rotateZ(0deg);
   }
 }
